@@ -1,0 +1,18 @@
+Instalación:
+
+Crear BD y tablas:
+- Edite, si desea, el nombre de la BD en sql/database_postgres.sql.
+- Importe el archivo: psql -U postgres -h localhost -f sql/database_postgres.sql
+
+Configurar conexión:
+- En public/api/db.php ajuste variables: DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASS
+
+Servir la app:
+- Con servidor embebido de PHP: cd public php -S localhost:8080
+- Abra http://localhost:8080
+
+Uso:
+El formulario carga Bodega, Sucursal (dependiente) y Moneda desde la BD.
+Valida en JavaScript (sin "required"), muestra alertas personalizadas.
+Verifica por AJAX la unicidad de "Código".
+Envía vía AJAX a PHP y guarda (productos + materiales).
